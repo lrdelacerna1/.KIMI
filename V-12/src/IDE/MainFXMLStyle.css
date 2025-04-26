@@ -1,0 +1,103 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 16, 2024, 10:10:24 PM
+    Author     : isabelalobitana
+*/
+
+
+#codeEditor{
+    -fx-font-family: 'Andale Mono'; /* Specify the font family */
+    -fx-text-fill: white;          /* Correct property for text color */
+}
+
+#codeEditor .content {
+    -fx-background-color: #1c1c24;  /* Optional: set background color for better visibility */
+    -fx-border-color: #54545d;
+}
+
+#terminal{
+    -fx-font-family: 'Andale Mono'; /* Specify the font family */
+    -fx-text-fill: white;          /* Correct property for text color */
+}
+
+#terminal .content {
+    -fx-background-color: #1c1c24;  /* Optional: set background color for better visibility */
+    -fx-border-color: #54545d;
+}
+#nums{
+    -fx-font-family: 'Andale Mono'; /* Specify the font family */
+    -fx-text-fill: white;          /* Correct property for text color */
+}
+
+#nums .content{
+    -fx-background-color: #1c1c24;  /* Optional: set background color for better visibility */
+    -fx-border-color: #54545d;
+}
+
+#nums .scroll-bar:horizontal {
+    -fx-opacity: 0; /* Hide horizontal scroll bar */
+    -fx-width: 0;
+    -fx-border-color: #54545d;
+}
+
+#nums .scroll-bar{
+    -fx-background-color: black;
+    -fx-border-color: #54545d;
+}
+#nums .scroll-bar:vertical {
+    -fx-border-color: #54545d;
+    -fx-opacity: .50; /* Hide vertical scroll bar */
+}
+
+.split-pane .split-pane-divider{
+    -fx-background-color: #54545d; /* Change to your desired divider color */
+    -fx-color: red;
+}
+
+.button{
+    -fx-background-color: transparent;
+}
+
+.tool-bar {
+    -fx-text-fill: white; 
+}
+
+#settings{
+    -fx-text-fill: white; 
+}
+
+.tab-pane .tab-header-background{
+    -fx-background-color: #1c1c24;
+}
+
+#tab1{
+    -fx-background-color: #d4d4d4;
+}
+
+#output{
+    -fx-background-color: transparent;
+    -fx-text-fill: white; 
+}
+
+#output .tab-label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white; 
+}
+
+.tree-view {
+    -fx-background-color: #2b2b2b; /* Dark background */
+}
+
+.tree-cell {
+    -fx-background-color: #1c1c24;; /* Dark background */
+    -fx-text-fill: white; /* Set the text color */
+    -fx-font-size: 14px;  /* Optional: Set font size */
+}
+
+.tree-view .tree-cell:selected {
+    -fx-background-color: #1c1c24;; /* Dark background */
+    -fx-text-fill: lightgray; /* Set text color for selected item */
+}

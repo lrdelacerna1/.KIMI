@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.PerspectiveCamera?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1500.0" stylesheets="@MainFXMLStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IDE.MainFXMLController">
+   <children>
+      <VBox prefHeight="713.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ToolBar fx:id="toolbar" style="-fx-background-color: #1c1c24;">
+               <items>
+                  <Button fx:id="btnNewFileClicked" mnemonicParsing="false" onAction="#btnNewFileClicked">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgsrc/open_new_file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnOpenFileClicked" mnemonicParsing="false" onAction="#btnOpenFileClicked">
+                      <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgsrc/open_file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                 </Button>
+                  <Button fx:id="btnSaveClicked" mnemonicParsing="false" onAction="#btnSaveClicked">
+                      <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgsrc/save_file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnSaveAsClicked" mnemonicParsing="false" onAction="#btnSaveAsClicked">
+                      <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgsrc/save_as.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+            
+                  <Button fx:id="btnCloseFileClicked" mnemonicParsing="false" onAction="#btnCloseFileClicked">
+                      <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgsrc/close_file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox opacity="0.0" prefHeight="45.0" prefWidth="1070.0" />
+                <Button mnemonicParsing="false" style="-fx-text-fill: #ffffff; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-font-weight: bold;" text="Settings" />
+                <Button mnemonicParsing="false" style="-fx-text-fill: #ffffff; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-font-weight: bold;" text="Help" />
+               </items>
+            </ToolBar>
+            <SplitPane dividerPositions="0.14946737683089215" style="-fx-background-color: #1c1a26; -fx-border-color: #fffffff;" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="180.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #1c1c24;" styleClass="divider">
+                     <children>
+                        <TreeView fx:id="fileTreeView" layoutY="-2.0" prefHeight="643.0" prefWidth="200.0" />
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="648.0" prefWidth="1310.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="222.0" layoutY="224.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: #1c1a26;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="1207.0">
+                                 <children>
+                                    <HBox layoutX="154.0" layoutY="176.0" prefHeight="326.0" prefWidth="1269.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox prefHeight="327.0" prefWidth="0.0">
+                                             <children>
+                                                <Button fx:id="btnCopyClicked" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnCopyClicked">
+                                                  <graphic>
+                                                     <ImageView fitHeight="30.0" fitWidth="26.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                           <Image url="@../imgsrc/copy.png" />
+                                                        </image>
+                                                     </ImageView>
+                                                  </graphic>
+                                               </Button>
+                                                <Button fx:id="btnPasteClicked" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnPasteClicked">
+                                                  <graphic>
+                                                     <ImageView fitHeight="25.0" fitWidth="27.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                           <Image url="@../imgsrc/paste.png" />
+                                                        </image>
+                                                     </ImageView>
+                                                  </graphic>
+                                               </Button>
+                                                <Button fx:id="btnUndoClicked" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnUndoClicked">
+                                                  <graphic>
+                                                     <ImageView fitHeight="27.0" fitWidth="29.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                           <Image url="@../imgsrc/undo.png" />
+                                                        </image>
+                                                     </ImageView>
+                                                  </graphic>
+                                               </Button>
+                                                <Button fx:id="btnRedoClicked" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnRedoClicked">
+                                                  <graphic>
+                                                     <ImageView fitHeight="27.0" fitWidth="34.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                           <Image url="@../imgsrc/redo.png" />
+                                                        </image>
+                                                     </ImageView>
+                                                  </graphic>
+                                               </Button>
+                                             </children>
+                                          </VBox>
+                                          <VBox>
+                                             <children>
+                                                <TabPane prefHeight="60.0" tabClosingPolicy="UNAVAILABLE">
+                                                  <tabs>
+                                                    <Tab fx:id="tab1" />
+                                                  </tabs>
+                                                </TabPane>
+                                                <HBox>
+                                                   <children>
+                                                      <TextArea fx:id="nums" editable="false" minWidth="10.0" prefHeight="282.0" prefWidth="54.0" wrapText="true" />
+                                                      <TextArea fx:id="codeEditor" maxWidth="-Infinity" onKeyTyped="#handleCodeModification" prefHeight="306.0" prefWidth="1182.0" style="-fx-background-color: #282120;" text="&#10;" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="150.0" minWidth="0.0" prefHeight="150.0" prefWidth="160.0" style="-fx-background-color: #1c1c24;">
+                                 <children>
+                                    <ToolBar layoutX="63.0" layoutY="6.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1c1c24;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                          <Button fx:id="btnCompileClicked" mnemonicParsing="false" onAction="#btnCompileClicked" prefHeight="17.0" prefWidth="35.0">
+                                              <graphic>
+                                                 <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                       <Image url="@../imgsrc/execute.png" />
+                                                    </image>
+                                                 </ImageView>
+                                              </graphic>
+                                          </Button>
+                                          <Button fx:id="btnExecuteClicked" mnemonicParsing="false" onAction="#btnExecuteClicked" prefHeight="45.0" prefWidth="46.0">
+                                              <graphic>
+                                                 <ImageView fitHeight="30.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                       <Image url="@../imgsrc/run.png" />
+                                                    </image>
+                                                 </ImageView>
+                                              </graphic>
+                                           </Button>
+                                          <Label fx:id="output" text="Output" style="-fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 0 15 0 20; -fx-alignment: center-left;"  />
+                                      </items>
+                                    </ToolBar>
+                                    <TextArea fx:id="terminal" layoutX="43.0" layoutY="66.0" onKeyTyped="#handleTerminalModification" prefHeight="246.0" prefWidth="1244.0" style="-fx-background-color: #282120;" text="&#10;" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </VBox>
+      <PerspectiveCamera />
+      <PerspectiveCamera /> <!-- Set initially invisible -->
+   </children>
+</AnchorPane>
